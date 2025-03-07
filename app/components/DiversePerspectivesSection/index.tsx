@@ -42,9 +42,9 @@ const DiversePerspectivesVersus = () => {
           </p>
           <div className="relative bg-green-50 border-l-4 border-green-500 p-4">
             <p className="italic text-gray-800">
-              “Mars offers us not only a new frontier for exploration but a chance to reinvent sustainable living.”
+            “I think there is a strong humanitarian argument for making life multi-planetary, in order to safeguard the existence of humanity in the event that something catastrophic were to happen. Mars is the only place we have a realistic shot at establishing a self-sustaining city."
             </p>
-            <p className="mt-2 text-right font-semibold text-green-700">— Proponent Quote</p>
+            <p className="mt-2 text-right font-semibold text-green-700">— Elon Musk, Founder of SpaceX</p>
           </div>
         </motion.div>
 
@@ -57,13 +57,13 @@ const DiversePerspectivesVersus = () => {
         <motion.div className="flex-1 bg-white rounded-lg p-6 shadow-lg" variants={itemVariants}>
           <h3 className="text-xl font-semibold text-red-600 mb-4">Opponents</h3>
           <p className="text-gray-700 mb-4">
-            Critics warn that colonizing Mars without addressing the psychological, social, and ethical impacts may lead to unsustainable settlements. They caution against replicating Earth’s exploitative models in a new environment.
+            Conversely, critics express deep concerns that rapid colonization efforts lacking rigorous attention to psychological, social, and ethical considerations may replicate Earth's problematic societal structures, ultimately compromising colony sustainability.
           </p>
           <div className="relative bg-red-50 border-l-4 border-red-500 p-4">
             <p className="italic text-gray-800">
-              “If we replicate Earth’s exploitative models on Mars, we risk creating a settlement that is unsustainable and prone to conflict.”
+            "Desire to see humans thrive on Mars shouldn’t eclipse questions about contamination or ethics, nor should it dictate our treatment of the Martian ecosystem."
             </p>
-            <p className="mt-2 text-right font-semibold text-red-700">— Professor Sarah Li</p>
+            <p className="mt-2 text-right font-semibold text-red-700">— Joelle Renstrom, "How we settle Mars is more important than when," The Space Review​</p>
           </div>
         </motion.div>
       </div>

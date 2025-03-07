@@ -58,21 +58,12 @@ const CognitiveChallengesSection = () => {
 
       {/* Intro Paragraph */}
       <motion.p className="leading-relaxed mb-6" variants={itemVariants}>
-        Mars missions will demand exceptional cognitive performance, requiring
-        astronauts to consistently manage complex tasks under stressful and
-        unpredictable conditions. Research indicates cognitive performance
-        declines by approximately <strong>10–15%</strong> during prolonged exposure
-        to isolated and confined environments. Crucially, decision-making capabilities
-        can deteriorate under high stress, potentially jeopardizing critical
-        mission operations.
+      Mars missions will demand exceptional cognitive performance, requiring astronauts to consistently manage complex tasks under stressful and unpredictable conditions. Research indicates cognitive performance declines by approximately 10–15% during prolonged exposure to isolated and confined environments (Basner et al., 2013). Crucially, decision-making capabilities can deteriorate under high stress, potentially jeopardizing critical mission operations.
       </motion.p>
 
       <motion.p className="leading-relaxed mb-8" variants={itemVariants}>
-        Analyses of astronaut performance during ISS missions indicate that
-        maintaining cognitive sharpness through structured training and
-        regular assessments significantly mitigates performance decline. Thus,
-        integrating cognitive enhancement techniques into daily mission routines
-        is crucial for successful Mars colonization.
+      Analyses of astronaut performance during ISS missions indicate that maintaining cognitive sharpness through structured training and regular assessments significantly mitigates performance decline. Thus, integrating cognitive enhancement techniques into daily mission routines is crucial for successful Mars colonization (Kanas, 2015).
+
       </motion.p>
 
       {/* Snug White Container for the Chart + Explanation */}

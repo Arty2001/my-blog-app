@@ -1,33 +1,36 @@
 import { motion } from "framer-motion";
-import {
-  FiMessageCircle,
-  FiUserCheck,
-  FiAlertCircle,
-} from "react-icons/fi"; // Icons from react-icons
+import { FiMessageCircle, FiUserCheck, FiAlertCircle } from "react-icons/fi";
 
-// Parent container animation
+// Parent container animation variants
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: {
+    opacity: 0
+  },
   visible: {
     opacity: 1,
     transition: {
       // Stagger appearance of child elements
-      staggerChildren: 0.2,
-    },
-  },
+      staggerChildren: 0.2
+    }
+  }
 };
 
-// Child item animation
+// Child item animation variants
 const itemVariants = {
-  hidden: { opacity: 0, y: 15 },
+  hidden: {
+    opacity: 0,
+    y: 15
+  },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6 },
-  },
+    transition: {
+      duration: 0.6
+    }
+  }
 };
 
-const HumanFactorSynthesisSection = () => {
+export default function HumanFactorSynthesisSection() {
   return (
     <motion.section
       className="max-w-5xl mx-auto px-6 py-12 text-white"
@@ -36,7 +39,7 @@ const HumanFactorSynthesisSection = () => {
       whileInView="visible"
       viewport={{ once: true }}
     >
-      {/* Title */}
+      {/* Section Title */}
       <motion.h2
         className="text-3xl md:text-4xl font-bold mb-6"
         variants={itemVariants}
@@ -45,26 +48,35 @@ const HumanFactorSynthesisSection = () => {
       </motion.h2>
 
       {/* Introductory Paragraph */}
-      <motion.p className="leading-relaxed mb-8" variants={itemVariants}>
-        Extended Mars missions involve <strong>long durations</strong> in cramped
-        habitats, limited communication with Earth, and minimal real-time interaction
-        with friends or family. This environment can lead to significant 
-        psychological and emotional hurdles, demanding well-structured support 
-        systems to safeguard crew well-being.
+      <motion.p
+        className="leading-relaxed mb-8"
+        variants={itemVariants}
+      >
+        The isolation and confinement associated with extended Mars missions
+        pose unique and severe challenges that significantly impact astronauts'
+        mental and emotional health. Astronauts face prolonged periods away from
+        Earth without regular, real-time communication with family and friends,
+        leading to heightened feelings of loneliness, depression, and anxiety.
+        Historical accounts from past space missions highlight instances where
+        isolation has exacerbated underlying psychological issues, sometimes
+        leading to interpersonal conflicts and decreased morale within
+        crew groups.
       </motion.p>
 
       {/* Bullet Points (Icons + Description) */}
-      <motion.ul className="space-y-5 mb-8" variants={itemVariants}>
+      <motion.ul
+        className="space-y-5 mb-8"
+        variants={itemVariants}
+      >
         {/* Communication Gaps */}
         <motion.li className="flex items-start gap-3" variants={itemVariants}>
           <FiMessageCircle className="text-2xl text-blue-400 mt-1" />
           <div>
-            <strong className="block font-medium">
-              Communication Gaps
-            </strong>
+            <strong className="block font-medium">Communication Gaps</strong>
             <span className="block text-sm">
               Astronauts often contend with delayed messages and sporadic
-              contact with loved ones, heightening feelings of isolation and stress.
+              contact with loved ones, heightening feelings of isolation
+              and stress.
             </span>
           </div>
         </motion.li>
@@ -73,13 +85,11 @@ const HumanFactorSynthesisSection = () => {
         <motion.li className="flex items-start gap-3" variants={itemVariants}>
           <FiAlertCircle className="text-2xl text-red-400 mt-1" />
           <div>
-            <strong className="block font-medium">
-              Psychological Strain
-            </strong>
+            <strong className="block font-medium">Psychological Strain</strong>
             <span className="block text-sm">
-              Confinement, disrupted sleep, and prolonged monotony can lead to
-              depression, irritability, and anxiety. Proactive mental health 
-              support is critical.
+              Confinement, disrupted sleep, and prolonged monotony can lead
+              to depression, irritability, and anxiety. Proactive mental
+              health support is critical.
             </span>
           </div>
         </motion.li>
@@ -88,11 +98,9 @@ const HumanFactorSynthesisSection = () => {
         <motion.li className="flex items-start gap-3" variants={itemVariants}>
           <FiUserCheck className="text-2xl text-green-400 mt-1" />
           <div>
-            <strong className="block font-medium">
-              Crew Dynamics
-            </strong>
+            <strong className="block font-medium">Crew Dynamics</strong>
             <span className="block text-sm">
-              Interpersonal tensions can escalate over extended periods in 
+              Interpersonal tensions can escalate over extended periods in
               close quarters, affecting group morale and mission outcomes.
             </span>
           </div>
@@ -107,15 +115,21 @@ const HumanFactorSynthesisSection = () => {
         Insights from the Mars-500 Study
       </motion.h3>
 
-      <motion.p className="leading-relaxed mb-6" variants={itemVariants}>
-        NASA’s <strong>Mars-500 simulation</strong> offered invaluable data on 
-        mental and emotional effects during a 520-day isolation experiment. 
-        Participants reported irritability, sleep disruptions, and decreased 
-        motivation, underscoring the need for robust psychological support 
-        strategies on real Mars missions.
+      {/* Mars-500 Paragraph */}
+      <motion.p
+        className="leading-relaxed mb-6"
+        variants={itemVariants}
+      >
+        NASA’s <strong>Mars-500 simulation</strong> study provides critical
+        insights into these challenges. Participants in this 520-day isolation
+        experiment exhibited notable psychological symptoms, including
+        irritability, sleep disruptions, and decreased motivation. Such findings
+        demonstrate the importance of proactive psychological care and
+        comprehensive support systems to prevent deterioration of mental health
+        over extended periods (Basner et al., 2013).
       </motion.p>
 
-      {/* Single Mars-500 Image */}
+      {/* Mars-500 Image */}
       <motion.div
         className="border border-gray-700 rounded-md p-2 shadow-md"
         variants={itemVariants}
@@ -131,6 +145,4 @@ const HumanFactorSynthesisSection = () => {
       </motion.div>
     </motion.section>
   );
-};
-
-export default HumanFactorSynthesisSection;
+}

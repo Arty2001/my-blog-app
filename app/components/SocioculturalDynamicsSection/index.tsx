@@ -41,14 +41,7 @@ const SocioculturalDynamicsSection = () => {
         className="leading-relaxed mb-10"
         variants={cardVariants}
       >
-        Moreover, the sociocultural dynamics among diverse, multicultural crews
-        are essential factors influencing mission outcomes. Crews on Mars will
-        comprise individuals from various cultural, linguistic, and professional
-        backgrounds, necessitating extraordinary cohesion and communication
-        skills. International Space Station (ISS) missions illustrate the
-        benefits of intensive team-building exercises that foster mutual
-        respect, empathy, and cooperative problem-solving among astronauts from
-        different cultures.
+        Moreover, the sociocultural dynamics among diverse, multicultural crews are essential factors influencing mission outcomes (Kanas,2015). Crews on Mars will comprise individuals from various cultural, linguistic, and professional backgrounds, necessitating extraordinary cohesion and communication skills. International Space Station (ISS) missions illustrate the benefits of intensive team-building exercises that foster mutual respect, empathy, and cooperative problem-solving among astronauts from different cultures (Salotti et al., 2015). 
       </motion.p>
 
       {/* Card Grid */}

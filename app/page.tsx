@@ -85,7 +85,7 @@ export default function Home() {
           <p className="text-white font-inter text-base text-gray-600">
             Written by{" "}
             <span className="font-bold">Athavan Thambimuthu (260990043)</span>{" "}
-            and <span className="font-bold">Alessandro Rocca </span>
+            and <span className="font-bold">Alessandro Rocca (260984371)</span>
           </p>
         </div>
       </section>

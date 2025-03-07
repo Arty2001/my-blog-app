@@ -14,7 +14,7 @@ import CognitiveChallengesSection from "./components/CognitiveChallengeSection";
 // ------------------------------
 function AnimatedRocket() {
   // useScroll provides the scroll values for the viewport.
-  const { scrollX, scrollY } = useScroll();
+  const { scrollY } = useScroll();
   // Map the scroll position from 0 to 300px to a translation from 0 to -200px.
   const y = useTransform(scrollY, [0, 300], [0, -200]);
   const x = useTransform(scrollY, [0, 300], [0, 200]);
@@ -58,18 +58,6 @@ function StarField() {
     </svg>
   );
 }
-
-// ------------------------------
-// Fade-in Variants for Sections
-// ------------------------------
-const fadeInVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8 },
-  },
-};
 
 // ------------------------------
 // Main Page Component

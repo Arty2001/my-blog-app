@@ -6,6 +6,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  ResponsiveContainer,
 } from "recharts";
 
 // Parent container animation
@@ -79,36 +80,36 @@ const CognitiveChallengesSection = () => {
         className="bg-white rounded-md p-3 shadow-md w-fit mx-auto text-center"
         variants={itemVariants}
       >
-        {/* Centered Chart (width 400px) */}
-        <div className="w-fit">
-          <LineChart
-            width={400}
-            height={250}
-            data={cognitiveData}
-            margin={{ top: 10, right: 20, left: 0, bottom: 0 }}
-          >
-            <CartesianGrid strokeDasharray="3 3" stroke="#aaaaaa" />
-            <XAxis dataKey="stage" stroke="#000" />
-            <YAxis stroke="#000" domain={[80, 100]} />
-            <Tooltip
-              contentStyle={{ backgroundColor: "#fff", border: "1px solid #ccc" }}
-              labelStyle={{ color: "#333" }}
-              itemStyle={{ color: "#333" }}
-            />
-            <Line
-              type="monotone"
-              dataKey="performance"
-              stroke="#8884d8"
-              strokeWidth={2}
-              activeDot={{ r: 6 }}
-            />
-          </LineChart>
+        {/* Responsive Chart Container */}
+        <div className="w-full max-w-md">
+          <ResponsiveContainer width="100%" height={250}>
+            <LineChart
+              data={cognitiveData}
+              margin={{ top: 10, right: 20, left: 0, bottom: 0 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" stroke="#aaaaaa" />
+              <XAxis dataKey="stage" stroke="#000" />
+              <YAxis stroke="#000" domain={[80, 100]} />
+              <Tooltip
+                contentStyle={{ backgroundColor: "#fff", border: "1px solid #ccc" }}
+                labelStyle={{ color: "#333" }}
+                itemStyle={{ color: "#333" }}
+              />
+              <Line
+                type="monotone"
+                dataKey="performance"
+                stroke="#8884d8"
+                strokeWidth={2}
+                activeDot={{ r: 6 }}
+              />
+            </LineChart>
+          </ResponsiveContainer>
         </div>
 
         {/* Specific Explanation for the Chart */}
         <p className="mt-2 text-sm text-gray-900 max-w-90 mx-auto">
-         A visualization of the gradual decline in astronaut cognitive
-          performance over mission days
+          A visualization of the gradual decline in astronaut cognitive
+          performance over mission days.
         </p>
       </motion.div>
     </motion.section>
